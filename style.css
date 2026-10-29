@@ -36,7 +36,7 @@ body {
   background: var(--paper);
   color: var(--ink);
   font-family: var(--serif);
-  font-size: clamp(18px, 0.9vw + 13px, 20px);
+  font-size: 18px;
   line-height: 1.65;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
@@ -62,8 +62,8 @@ a:hover { color: var(--accent); }
 
 /* Typografie */
 h1, h2, h3 { font-weight: 400; line-height: 1.08; letter-spacing: -0.025em; margin: 0 0 0.6em; text-wrap: balance; }
-h1 { font-size: clamp(3rem, 7.2vw, 7rem); line-height: 0.98; letter-spacing: -0.035em; }
-h2 { font-size: clamp(2rem, 3.6vw + 0.4rem, 3.6rem); }
+h1 { font-size: clamp(3rem, 5.2vw, 4.75rem); line-height: 0.98; letter-spacing: -0.035em; }
+h2 { font-size: clamp(2rem, 1.6vw + 1.2rem, 2.6rem); }
 h3 { font-size: 1.2rem; font-weight: 600; letter-spacing: -0.01em; }
 p { margin: 0 0 1.1em; }
 .prose p:last-child { margin-bottom: 0; }
@@ -124,7 +124,7 @@ p { margin: 0 0 1.1em; }
 /* Intro */
 .hero { position: relative; min-height: 100svh; display: flex; align-items: center; padding: 120px 0 96px; }
 .hero-grid { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: clamp(40px, 6vw, 96px); align-items: center; width: 100%; }
-.lead { font-size: 1.15em; color: var(--ink-soft); max-width: 32ch; margin-top: 1.6em; }
+.lead { font-size: 1.1em; color: var(--ink-soft); max-width: 32ch; margin-top: 1.6em; }
 .actions { display: flex; flex-wrap: wrap; align-items: center; gap: 20px 32px; margin-top: 2.4em; }
 .price { font-size: 1.9rem; letter-spacing: -0.02em; line-height: 1; }
 .price small { font-family: var(--mono); font-size: 0.8rem; letter-spacing: 0.08em; color: var(--ink-soft); margin-left: 6px; }
@@ -144,7 +144,7 @@ p { margin: 0 0 1.1em; }
 
 /* Motto */
 .motto { text-align: center; padding: clamp(36px, 6vw, 72px) var(--gutter); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
-.motto p { margin: 0; font-family: var(--mono); font-size: clamp(1.1rem, 2.4vw + 0.3rem, 2rem); letter-spacing: 0.04em; }
+.motto p { margin: 0; font-family: var(--mono); font-size: clamp(1.1rem, 1.2vw + 0.6rem, 1.5rem); letter-spacing: 0.04em; }
 
 /* Secties */
 .section { padding: var(--section) 0; }
@@ -160,7 +160,7 @@ p { margin: 0 0 1.1em; }
 
 /* Citaat */
 .quote { padding: clamp(40px, 8vw, 120px) 0 clamp(80px, 12vw, 160px); text-align: center; }
-.quote blockquote { margin: 0 auto; max-width: 14ch; font-size: clamp(2.6rem, 8vw, 8.5rem); line-height: 1; letter-spacing: -0.04em; font-style: italic; text-wrap: balance; }
+.quote blockquote { margin: 0 auto; max-width: 14ch; font-size: clamp(2.6rem, 5vw, 4.5rem); line-height: 1; letter-spacing: -0.04em; font-style: italic; text-wrap: balance; }
 
 /* Voorwoord: als een bladzijde uit het boek */
 .excerpt { display: grid; grid-template-columns: 0.7fr 1.3fr; gap: clamp(40px, 7vw, 112px); align-items: center; }
@@ -171,7 +171,7 @@ p { margin: 0 0 1.1em; }
   box-shadow: 0 1px 0 var(--line), 0 40px 70px -45px rgb(60 45 25 / 0.45);
   font-family: var(--mono); text-align: center; max-width: 40em;
 }
-.excerpt-page h2 { font-family: var(--mono); font-size: clamp(1.8rem, 2.6vw + 0.6rem, 2.6rem); letter-spacing: 0; margin-bottom: 1.4em; }
+.excerpt-page h2 { font-family: var(--mono); font-size: clamp(1.8rem, 1vw + 1.2rem, 2.1rem); letter-spacing: 0; margin-bottom: 1.4em; }
 .excerpt-page p { font-size: 0.95rem; line-height: 1.75; }
 .excerpt-cta { display: inline-block; margin-top: 1.6em; font-size: 0.9rem; }
 
@@ -280,6 +280,7 @@ p { margin: 0 0 1.1em; }
   .form-intro { position: static; }
   .amalia-logo-wrap { justify-content: start; }
   .scroll-hint { display: none; }
+  .footer-logo { width: 140px; margin: 32px 0 40px; opacity: 1; }
 }
 @media (max-width: 520px) {
   .form { grid-template-columns: 1fr; }
