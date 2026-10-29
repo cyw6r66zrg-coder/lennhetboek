@@ -18,6 +18,7 @@
   <link rel="preload" href="fonts/newsreader-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/courier-prime-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="style.css">
+  <script>document.documentElement.classList.add("js");</script>
 </head>
 <body>
   <a class="skip" href="#bestellen">Direct naar het inschrijfformulier</a>
@@ -28,6 +29,7 @@
         <img src="img/logo.png" alt="LENN" width="600" height="160">
       </a>
       <nav aria-label="Hoofdmenu">
+        <a href="#welkom">Over Lenn</a>
         <a href="#het-boek">Het boek</a>
         <a href="#amalia">Amalia Kinderfonds</a>
         <a href="#bestellen" class="nav-cta">Bestellen</a>
@@ -40,88 +42,113 @@
     <section class="hero">
       <div class="wrap hero-grid">
         <div class="hero-text">
-          <p class="label">Een boek voor Lenn</p>
-          <h1>Een boek dat er niet had moeten zijn.</h1>
-          <p class="lead">Herinneringen, flarden en gedachten van een vader. De opbrengst gaat naar het Amalia Kinderfonds van het Radboudumc in Nijmegen.</p>
-          <dl class="facts">
-            <div><dt>Prijs</dt><dd>€35 per boek</dd></div>
-            <div><dt>Levertijd</dt><dd>ca. 5 tot 6 weken</dd></div>
-            <div><dt>Opbrengst</dt><dd>Amalia Kinderfonds</dd></div>
-          </dl>
-          <div class="actions">
-            <a href="#bestellen" class="btn">Ik wil een boek</a>
-            <a href="#welkom" class="link">Lees eerst meer</a>
+          <p class="label" data-reveal>Een boek van Félix voor zijn zoon</p>
+          <h1 data-split>Een boek dat er niet had moeten zijn.</h1>
+          <p class="lead" data-reveal style="--d: 0.5s">Herinneringen, flarden en gedachten van een vader. De opbrengst gaat naar het Amalia Kinderfonds van het Radboudumc in Nijmegen.</p>
+          <div class="actions" data-reveal style="--d: 0.65s">
+            <a href="#bestellen" class="btn">Ik wil een boek <span class="arrow" aria-hidden="true">→</span></a>
+            <span class="price">€35 <small>per boek</small></span>
           </div>
         </div>
-        <figure class="hero-image">
-          <picture>
-            <source srcset="img/boek-bank.webp" type="image/webp">
-            <img src="img/boek-bank.jpg" alt="Het boek Lenn staat op een houten bank naast een vaas met droogbloemen" width="1000" height="1250" fetchpriority="high">
-          </picture>
-        </figure>
+
+        <div class="hero-visual">
+          <figure class="hero-image reveal-mask" data-reveal data-tilt>
+            <picture>
+              <source srcset="img/boek-bank.webp" type="image/webp">
+              <img src="img/boek-bank.jpg" alt="Het boek Lenn staat op een houten bank naast een vaas met droogbloemen" width="1000" height="1250" fetchpriority="high" data-parallax="0.06">
+            </picture>
+          </figure>
+          <div class="badge" aria-hidden="true">
+            <svg viewBox="0 0 200 200">
+              <defs><path id="cirkel" d="M100,100 m-78,0 a78,78 0 1,1 156,0 a78,78 0 1,1 -156,0"/></defs>
+              <text textLength="480" lengthAdjust="spacing"><textPath href="#cirkel" textLength="480" lengthAdjust="spacing">Opbrengst naar het Amalia Kinderfonds ✦ €35 per boek ✦</textPath></text>
+            </svg>
+            <span class="badge-heart">♥</span>
+          </div>
+        </div>
       </div>
+      <a href="#welkom" class="scroll-hint" aria-label="Scroll naar beneden"><span></span></a>
     </section>
 
-    <!-- Welkom -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>Lenn. Kort. Stoer. Onvergetelijk.</span><span>✦</span>
+        <span>Lenn. Kort. Stoer. Onvergetelijk.</span><span>✦</span>
+        <span>Lenn. Kort. Stoer. Onvergetelijk.</span><span>✦</span>
+        <span>Lenn. Kort. Stoer. Onvergetelijk.</span><span>✦</span>
+      </div>
+    </div>
+
+    <!-- 01 Welkom -->
     <section id="welkom" class="section">
-      <div class="wrap split">
-        <figure class="photo">
-          <picture>
-            <source srcset="img/felix-en-lenn.webp" type="image/webp">
-            <img src="img/felix-en-lenn.jpg" alt="Félix en Lenn spelen samen in de zandbak" width="1000" height="1333" loading="lazy">
-          </picture>
-        </figure>
-        <div class="prose">
-          <p class="label">Welkom</p>
-          <h2>Mijn naam is Félix, vader van Lenn en Fons.</h2>
-          <p>Lenn werd op 22 juli 2025 veel te vroeg uit ons leven weggerukt. Hij werd nog geen twee jaar oud.</p>
-          <p>Dit boek schreef ik voor hem. De opbrengst gaat naar het Amalia Kinderfonds van het Radboudumc in Nijmegen. Het ziekenhuis dat voor Lenn heeft gezorgd.</p>
+      <div class="wrap">
+        <p class="section-nr" data-reveal><span>01</span> Welkom</p>
+        <div class="split">
+          <figure class="photo reveal-mask" data-reveal>
+            <picture>
+              <source srcset="img/felix-en-lenn.webp" type="image/webp">
+              <img src="img/felix-en-lenn.jpg" alt="Félix en Lenn spelen samen in de zandbak" width="1000" height="1333" loading="lazy" data-parallax="0.08">
+            </picture>
+          </figure>
+          <div class="prose">
+            <h2 data-split>Mijn naam is Félix, vader van Lenn en Fons.</h2>
+            <p data-reveal>Lenn werd op 22 juli 2025 veel te vroeg uit ons leven weggerukt. Hij werd nog geen twee jaar oud.</p>
+            <p data-reveal>De opbrengst van dit boek gaat naar het Amalia Kinderfonds van het Radboudumc in Nijmegen. Het ziekenhuis dat voor Lenn heeft gezorgd.</p>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="motto" aria-label="Ondertitel van het boek">
-      <p>Lenn. Kort. Stoer. Onvergetelijk.</p>
+    <section class="quote" aria-label="Citaat">
+      <div class="wrap">
+        <blockquote data-split data-split-slow>Dit boek schreef ik voor hem.</blockquote>
+      </div>
     </section>
 
-    <!-- Over het boek -->
+    <!-- 02 Over het boek -->
     <section id="het-boek" class="section">
-      <div class="wrap split split-reverse">
-        <figure class="photo">
-          <picture>
-            <source srcset="img/boek-kast.webp" type="image/webp">
-            <img src="img/boek-kast.jpg" alt="Het boek Lenn op een nachtkastje naast een lamp en een leesbril" width="1000" height="836" loading="lazy">
-          </picture>
-        </figure>
-        <div class="prose">
-          <p class="label">Over het boek</p>
-          <h2>Lenn was nog geen twee jaar oud. Maar hij liet genoeg achter voor een heel boek.</h2>
-          <p>Dit boek gaat over rouw zonder routekaart. Over een gezin dat van dag tot dag leert leven met wat er is. En over een jongen die in alles blijft.</p>
-          <p>Geen roman. Geen dagboek. Een bundel van herinneringen, flarden en gedachten. Geschreven zoals het leven gaat. In kleine dingen.</p>
-          <p class="signature">Geschreven door de vader van Lenn en Fons. Niet als schrijver. Maar als vader die iets in beweging wil houden.</p>
+      <div class="wrap">
+        <p class="section-nr" data-reveal><span>02</span> Over het boek</p>
+        <div class="split split-reverse">
+          <figure class="photo reveal-mask" data-reveal>
+            <picture>
+              <source srcset="img/boek-kast.webp" type="image/webp">
+              <img src="img/boek-kast.jpg" alt="Het boek Lenn op een nachtkastje naast een lamp en een leesbril" width="1000" height="836" loading="lazy" data-parallax="0.06">
+            </picture>
+          </figure>
+          <div class="prose">
+            <h2 data-split>Lenn was nog geen twee jaar oud. Maar hij liet genoeg achter voor een heel boek.</h2>
+            <p data-reveal>Dit boek gaat over rouw zonder routekaart. Over een gezin dat van dag tot dag leert leven met wat er is. En over een jongen die in alles blijft.</p>
+            <p data-reveal>Geen roman. Geen dagboek. Een bundel van herinneringen, flarden en gedachten. Geschreven zoals het leven gaat. In kleine dingen.</p>
+            <p class="signature" data-reveal>Geschreven door de vader van Lenn en Fons. Niet als schrijver. Maar als vader die iets in beweging wil houden.</p>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Amalia Kinderfonds -->
-    <section id="amalia" class="section section-tint">
-      <div class="wrap amalia">
-        <img src="img/amalia-kinderfonds.png" alt="Logo Amalia Kinderfonds" width="300" height="300" loading="lazy" class="amalia-logo">
-        <div class="prose">
-          <p class="label">Waar de opbrengst naartoe gaat</p>
-          <h2>Amalia Kinderfonds</h2>
-          <p>Lenn heeft twee nachten in het Amalia Kinderziekenhuis van het Radboudumc in Nijmegen doorgebracht. De mensen die daar werken doen ongelooflijk waardevol werk. Elke ouder en elk kind dat dit moet meemaken verdient dezelfde zorg en aandacht als wij hebben mogen ervaren.</p>
-          <p>Daarom gaat de opbrengst van dit boek, na aftrek van de drukkosten, naar het <a href="https://amaliakinderfonds.nl/" target="_blank" rel="noopener">Amalia Kinderfonds</a>.</p>
+    <!-- 03 Amalia Kinderfonds -->
+    <section id="amalia" class="section section-dark">
+      <div class="wrap">
+        <p class="section-nr" data-reveal><span>03</span> Waar de opbrengst naartoe gaat</p>
+        <div class="amalia">
+          <div class="amalia-logo-wrap" data-reveal>
+            <img src="img/amalia-kinderfonds.png" alt="Logo Amalia Kinderfonds" width="300" height="300" loading="lazy" class="amalia-logo">
+          </div>
+          <div class="prose">
+            <h2 data-split>Elk kind verdient de zorg die Lenn kreeg.</h2>
+            <p data-reveal>Lenn heeft twee nachten in het Amalia Kinderziekenhuis van het Radboudumc in Nijmegen doorgebracht. De mensen die daar werken doen ongelooflijk waardevol werk. Elke ouder en elk kind dat dit moet meemaken verdient dezelfde zorg en aandacht als wij hebben mogen ervaren.</p>
+            <p data-reveal>Daarom gaat de opbrengst van dit boek, na aftrek van de drukkosten, naar het <a href="https://amaliakinderfonds.nl/" target="_blank" rel="noopener">Amalia Kinderfonds</a>.</p>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Hoe het werkt -->
+    <!-- 04 Zo werkt het -->
     <section class="section">
       <div class="wrap">
-        <p class="label center">Prijs en voorverkoop</p>
-        <h2 class="center">Zo werkt het</h2>
-        <ol class="steps">
+        <p class="section-nr" data-reveal><span>04</span> Prijs en voorverkoop</p>
+        <h2 class="steps-title" data-split>Zo komt het boek bij jou.</h2>
+        <ol class="steps" data-reveal>
           <li>
             <span class="step-nr">1</span>
             <h3>Je schrijft je in</h3>
@@ -138,91 +165,97 @@
             <p>Na betaling worden de boeken gedrukt en opgestuurd. De levertijd is ongeveer vijf tot zes weken.</p>
           </li>
         </ol>
-        <p class="notice">De eerste inschrijfronde is gesloten en de betaalverzoeken zijn verstuurd. Schrijf je je nu in, dan neem ik je mee in de volgende inschrijfronde.</p>
+        <p class="notice" data-reveal>De eerste inschrijfronde is gesloten en de betaalverzoeken zijn verstuurd. Schrijf je je nu in, dan neem ik je mee in de volgende inschrijfronde.</p>
       </div>
     </section>
 
-    <!-- Formulier -->
+    <!-- 05 Formulier -->
     <section id="bestellen" class="section section-tint">
-      <div class="wrap form-wrap">
-        <div class="form-intro">
-          <p class="label">Bestellen</p>
-          <h2>Ik wil een boek</h2>
-          <p>Vul het formulier in om je in te schrijven. Je telefoonnummer heb ik nodig om je het betaalverzoek te sturen, je adres om het boek op te sturen.</p>
-        </div>
+      <div class="wrap">
+        <p class="section-nr" data-reveal><span>05</span> Bestellen</p>
+        <div class="form-wrap">
+          <div class="form-intro">
+            <h2 data-split>Ik wil een boek.</h2>
+            <p data-reveal>Vul het formulier in om je in te schrijven. Je telefoonnummer heb ik nodig om je het betaalverzoek te sturen, je adres om het boek op te sturen.</p>
+          </div>
 
-        <form id="inschrijving" class="form" novalidate>
-          <div class="field full">
-            <label for="naam">Voor- en achternaam</label>
-            <input id="naam" name="naam" type="text" autocomplete="name" required>
-          </div>
-          <div class="field">
-            <label for="email">E-mailadres</label>
-            <input id="email" name="email" type="email" autocomplete="email" required>
-          </div>
-          <div class="field">
-            <label for="telefoon">Telefoonnummer <span class="hint">(voor het betaalverzoek)</span></label>
-            <input id="telefoon" name="telefoon" type="tel" autocomplete="tel" inputmode="tel" required pattern="[0-9+\s\-()]{10,}">
-          </div>
-          <div class="field full">
-            <label for="straat">Straat en huisnummer</label>
-            <input id="straat" name="straat" type="text" autocomplete="street-address" required>
-          </div>
-          <div class="field">
-            <label for="postcode">Postcode</label>
-            <input id="postcode" name="postcode" type="text" autocomplete="postal-code" required pattern="\s*[1-9][0-9]{3}\s?[A-Za-z]{2}\s*" placeholder="1234 AB">
-          </div>
-          <div class="field">
-            <label for="woonplaats">Woonplaats</label>
-            <input id="woonplaats" name="woonplaats" type="text" autocomplete="address-level2" required>
-          </div>
-          <div class="field">
-            <label for="aantal">Aantal boeken</label>
-            <div class="qty">
-              <button type="button" data-step="-1" aria-label="Eén minder">−</button>
-              <input id="aantal" name="aantal" type="number" min="1" max="50" value="1" required inputmode="numeric">
-              <button type="button" data-step="1" aria-label="Eén meer">+</button>
+          <form id="inschrijving" class="form" novalidate data-reveal>
+            <div class="field full">
+              <label for="naam">Voor- en achternaam</label>
+              <input id="naam" name="naam" type="text" autocomplete="name" required>
             </div>
-          </div>
-          <div class="field total" aria-live="polite">
-            <span>Totaal</span>
-            <strong id="totaal">€35</strong>
-          </div>
-          <div class="field full">
-            <label for="opmerking">Opmerking <span class="hint">(niet verplicht)</span></label>
-            <textarea id="opmerking" name="opmerking" rows="3"></textarea>
-          </div>
+            <div class="field">
+              <label for="email">E-mailadres</label>
+              <input id="email" name="email" type="email" autocomplete="email" required>
+            </div>
+            <div class="field">
+              <label for="telefoon">Telefoonnummer <span class="hint">(voor het betaalverzoek)</span></label>
+              <input id="telefoon" name="telefoon" type="tel" autocomplete="tel" inputmode="tel" required pattern="[0-9+\s\-()]{10,}">
+            </div>
+            <div class="field full">
+              <label for="straat">Straat en huisnummer</label>
+              <input id="straat" name="straat" type="text" autocomplete="street-address" required>
+            </div>
+            <div class="field">
+              <label for="postcode">Postcode</label>
+              <input id="postcode" name="postcode" type="text" autocomplete="postal-code" required pattern="\s*[1-9][0-9]{3}\s?[A-Za-z]{2}\s*" placeholder="1234 AB">
+            </div>
+            <div class="field">
+              <label for="woonplaats">Woonplaats</label>
+              <input id="woonplaats" name="woonplaats" type="text" autocomplete="address-level2" required>
+            </div>
+            <div class="field">
+              <label for="aantal">Aantal boeken</label>
+              <div class="qty">
+                <button type="button" data-step="-1" aria-label="Eén minder">−</button>
+                <input id="aantal" name="aantal" type="number" min="1" max="50" value="1" required inputmode="numeric">
+                <button type="button" data-step="1" aria-label="Eén meer">+</button>
+              </div>
+            </div>
+            <div class="field total" aria-live="polite">
+              <span>Totaal</span>
+              <strong id="totaal">€35</strong>
+            </div>
+            <div class="field full">
+              <label for="opmerking">Opmerking <span class="hint">(niet verplicht)</span></label>
+              <textarea id="opmerking" name="opmerking" rows="3"></textarea>
+            </div>
 
-          <!-- Spamval: echte bezoekers zien en vullen dit veld niet -->
-          <div class="hp" aria-hidden="true">
-            <label for="website">Laat dit veld leeg</label>
-            <input id="website" name="website" type="text" tabindex="-1" autocomplete="off">
-          </div>
+            <!-- Spamval: echte bezoekers zien en vullen dit veld niet -->
+            <div class="hp" aria-hidden="true">
+              <label for="website">Laat dit veld leeg</label>
+              <input id="website" name="website" type="text" tabindex="-1" autocomplete="off">
+            </div>
 
-          <div class="full">
-            <button type="submit" class="btn btn-block">Ik schrijf me in</button>
-            <p class="small">Je gegevens gebruik ik alleen voor je bestelling. Lees de <a href="privacy.html">privacyverklaring</a>.</p>
-            <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
-          </div>
-        </form>
+            <div class="full">
+              <button type="submit" class="btn btn-block">Ik schrijf me in <span class="arrow" aria-hidden="true">→</span></button>
+              <p class="small">Je gegevens gebruik ik alleen voor je bestelling. Lees de <a href="privacy.html">privacyverklaring</a>.</p>
+              <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
+            </div>
+          </form>
 
-        <div id="bedankt" class="thanks" hidden tabindex="-1">
-          <h3>Dank je wel, je inschrijving is gelukt.</h3>
-          <p>Je ontvangt een bevestiging per e-mail. Kijk ook even in je spam- of reclamemap als je niets ziet. Na afloop van de inschrijfronde krijg je een betaalverzoek via WhatsApp of sms.</p>
+          <div id="bedankt" class="thanks" hidden tabindex="-1">
+            <h3>Dank je wel, je inschrijving is gelukt.</h3>
+            <p>Je ontvangt een bevestiging per e-mail. Kijk ook even in je spam- of reclamemap als je niets ziet. Na afloop van de inschrijfronde krijg je een betaalverzoek via WhatsApp of sms.</p>
+          </div>
         </div>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="wrap footer-inner">
-      <p>Lenn · een boek van Félix voor zijn zoon</p>
-      <p>De opbrengst gaat naar het <a href="https://amaliakinderfonds.nl/" target="_blank" rel="noopener">Amalia Kinderfonds</a></p>
-      <p><a href="privacy.html">Privacyverklaring</a></p>
+    <div class="wrap">
+      <div class="footer-inner">
+        <p>Een boek van Félix voor zijn zoon</p>
+        <p>De opbrengst gaat naar het <a href="https://amaliakinderfonds.nl/" target="_blank" rel="noopener">Amalia Kinderfonds</a></p>
+        <p><a href="privacy.html">Privacyverklaring</a></p>
+      </div>
+      <img class="footer-logo" src="img/logo.png" alt="" width="600" height="160" loading="lazy">
     </div>
   </footer>
 
   <script src="config.js"></script>
   <script src="form.js"></script>
+  <script src="animaties.js"></script>
 </body>
 </html>

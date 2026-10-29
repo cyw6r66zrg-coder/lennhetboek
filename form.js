@@ -31,6 +31,9 @@
   function werkTotaalBij() {
     var n = aantalWaarde();
     totaal.textContent = n > 0 ? euro(n * prijs) : "—";
+    totaal.classList.remove("tik");
+    void totaal.offsetWidth;
+    totaal.classList.add("tik");
   }
 
   form.querySelectorAll(".qty button").forEach(function (btn) {
